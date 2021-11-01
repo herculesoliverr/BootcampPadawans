@@ -14,7 +14,7 @@ export default () =>
                 initialView="dayGridMonth"
                 height="70vh"
                 locale='pt-br'
-                events={'https://fullcalendar.io/demo-events.json?overload-day'}
+                events={'https://localhost:5001/Evento'}
                 buttonText={
                     {today: 'Hoje'}
                 }
