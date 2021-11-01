@@ -4,6 +4,7 @@ import './Events.css'
 import eventsList from "../../data/eventsList"
 
 export default () =>{
+
     const [toogle, setToogle] = useState(true);
 
     const [altura, setAltura] = useState('100px');
@@ -22,10 +23,9 @@ export default () =>{
         <i className="fas fa-sort-up" onClick={e => setToogle(state => !state)}></i>);
     }, [toogle]);
 
-    function showEventsList(element, index){
-            const { element, index } = props;
-            return(
-                <div key={e.id} className="card" style={{height: eventsList[index].title == e.title ? altura : '100px'}}>
+    function showEventsList(){
+            return eventsList.map(e =>
+                <div key={e.id} className="card" style={{height: altura}}>
                     <div className="content">
                         <h3>{e.title}</h3>
                         <span>Dia: {e.start}</span>
@@ -39,12 +39,10 @@ export default () =>{
         
     }
 
- 
-
     return(
         <aside>
             <h1>Próximos Eventos</h1>
-            {eventsList.map(showEventsList(e,index))}
+            {showEventsList()}
         </aside>
     )
 }
