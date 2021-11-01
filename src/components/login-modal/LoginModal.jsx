@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import iconeNomeDoEvento from "../../assets/imagens/CriarEvento/name2-icon 2.png"; 
 import iconeCnpj from "../../assets/imagens/CriarEvento/cnpj2-icon 4.png";
 import iconeClose from "../../assets/imagens/CriarEvento/x.png";
 import iconeSenha from "../../assets/imagens/CriarEvento/cadeado-seguro.png";

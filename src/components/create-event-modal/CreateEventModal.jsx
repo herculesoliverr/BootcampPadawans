@@ -76,7 +76,7 @@ export default function CreateEventModal() {
                                 <label>
                                 <img src={iconeDoar} alt="Doações"/>
                                 </label>
-                                <input type="text" placeholder="Doações" name="donations" required/>
+                                <input type="text" placeholder="Doações" name="donation" required/>
                             </div>
                             <div className="formGroup">
                                 <label>

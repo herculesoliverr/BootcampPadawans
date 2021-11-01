@@ -28,10 +28,6 @@ aside::-webkit-scrollbar-thumb{
     transition: 0.3s ease-in-out;
 }
 
-.isOpen {
-    height: 160px;
-}
-
 .card .content{
     width: 80%;
     display: block;
@@ -42,9 +38,17 @@ aside::-webkit-scrollbar-thumb{
     margin-top: 10px;
 }
 
-.card i{
+.card .fa-sort-down{
     position: absolute;
     bottom: 12px;
+    font-size: 40px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.card .fa-sort-up{
+    position: absolute;
+    bottom: -5px;
     font-size: 40px;
     right: 20px;
     cursor: pointer;

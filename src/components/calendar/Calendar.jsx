@@ -13,8 +13,11 @@ export default () =>
                 plugins={[ dayGridPlugin ]}
                 initialView="dayGridMonth"
                 height="70vh"
-                locale="pt-br"
+                locale='pt-br'
                 events={'https://fullcalendar.io/demo-events.json?overload-day'}
+                buttonText={
+                    {today: 'Hoje'}
+                }
                 />
             </div>
 
