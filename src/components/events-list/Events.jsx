@@ -9,12 +9,14 @@ export default () =>{
 
     const [altura, setAltura] = useState('100px');
 
+    const [clicked, setCliked] = useState('');
+
     const [arrow, setArrow] = useState(
-    <i className="fas fa-sort-down" onClick={e => setToogle(state => !state)}></i>
+        <i className="fas fa-sort-down" onClick={e => setToogle(state => !state)}></i>
     );
 
     useEffect(() => {
-        setAltura((state) => toogle ? '100px': '165px');
+        setAltura(() => toogle ? '100px': '165px');
     }, [toogle]);
 
     useEffect(() => {
@@ -25,7 +27,9 @@ export default () =>{
 
     function showEventsList(){
             return eventsList.map(e =>
-                <div key={e.id} className="card" style={{height: altura}}>
+                <div key={e.id} className="card" 
+                style={{height: clicked == e.id ? altura : '100px'}}>
+                    
                     <div className="content">
                         <h3>{e.title}</h3>
                         <span>Dia: {e.start}</span>
@@ -33,7 +37,15 @@ export default () =>{
                         <span>Tipo de Doação: {e.donation}</span>
                         <span>Contato: {e.phone}</span>
                     </div>
-                    {arrow}
+
+                    {clicked == e.id ? 
+                        <div onClick={ev => setCliked(() => e.id )}>
+                            {arrow}
+                        </div> : 
+                        <div onClick={ev => setCliked(() => e.id )}>
+                            <i className="fas fa-sort-down" onClick={e => setToogle(state => !state)}></i>
+                        </div>
+                    } 
                 </div>
             )
         
