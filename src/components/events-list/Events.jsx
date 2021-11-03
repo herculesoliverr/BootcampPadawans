@@ -25,8 +25,15 @@ export default () =>{
         <i className="fas fa-sort-up" onClick={e => setToogle(state => !state)}></i>);
     }, [toogle]);
 
-    function showEventsList(){
-            return eventsList.map(e =>
+
+    const getEvents =  async () => {
+        const url = 'https://localhost:5001/Evento';
+        const response = await (await fetch(url, 'GET').json());
+        showEventsList(response);
+    }
+
+    function showEventsList(data){
+            return data.map(e =>
                 <div key={e.id} className="card" 
                 style={{height: clicked == e.id ? altura : '100px'}}>
                     
