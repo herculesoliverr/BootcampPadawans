@@ -4,19 +4,33 @@ import LoginModal from '../login-modal/LoginModal'
 
 import './Nav.css'
 
-export default () => 
+export default () => {
+
+    function resetUser(){
+        localStorage.removeItem('user')
+
+        window.location.reload();
+    }
+    
+    const userName = localStorage.getItem('user');
+    
+    return (
         <nav>
             <h1><i className="fas fa-globe-americas"></i> ONGarniza</h1>
+            
+            {userName === null ? 
+                <div className='notLog'> 
+                    <ul>
+                        <li><SignUpModal/></li>
+                        <li><LoginModal/></li>
+                    </ul>
+                </div> : 
 
-            <div className='notLog'> 
-                <ul>
-                    <li><SignUpModal/></li>
-                    <li><LoginModal/></li>
-                </ul>
-            </div>
-
-            <div className='logged'>
-                <h1>Olá, ONG X</h1>
-                <span>Sair</span>
-            </div>
+                <div className='logged'>
+                    <h1>Olá, {userName}</h1>
+                    <span onClick={resetUser}>Sair</span>
+                </div>
+            }      
         </nav>
+    )
+}

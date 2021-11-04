@@ -57,7 +57,7 @@ section .content .options ul{
     justify-content: space-around;
 }
 
-section .content .options ul li #btnCriar, #btnONG {
+section .content .options ul li #btnONG {
     padding: 15px;
     width: 20vw;
     background-color: #97BF7A;
@@ -68,7 +68,7 @@ section .content .options ul li #btnCriar, #btnONG {
     font-size: 17px;
 }
 
-section .content .options ul li #btnCriar:hover, #btnONG:hover{
+section .content .options ul li #btnONG:hover{
     background-color: #000;
     color: #ffff;
 }

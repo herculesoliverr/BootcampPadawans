@@ -14,7 +14,7 @@ export default function LoginModal() {
 
     return (
         <>
-            <button id="btnNav" onClick={toggleModal}>Acesso ONGs</button>
+            <button id="btnLogin" onClick={toggleModal}>Acesso ONGs</button>
 
             {modal && (
                 <div className="modal">
@@ -40,8 +40,8 @@ export default function LoginModal() {
                             <button className="btn-login" type="submit">Entrar</button>
 
                             <div className="login-options">
-                                <button>Esqueci Minha Senha</button>
-                                <button>Cadastre-Se</button>
+                                <button type="button">Esqueci Minha Senha</button>
+                                <button type="button">Cadastre-Se</button>
                             </div>
                         </form>
                         <button className="close-modal-login" onClick={toggleModal}>

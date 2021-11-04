@@ -24,21 +24,21 @@ nav .notLog li{
     margin-right: 20px;
 }
 
-nav .notLog #btnNav{
-    background-color: #043412;
-    color: rgb(243, 235, 235);
-    padding: 10px 15px;
+nav .logged {
+    display: flex;
+    align-items: center;
+}
+
+nav .logged h1{
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+nav .logged span{
+    cursor:pointer;
+    padding: 5px 10px;
+    background-color: rgb(255, 46, 46);
     border-radius: 5px;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-nav .notLog #btnNav:hover{
-    color: #043412;
-    background-color: rgb(243, 235, 235);
-}
-
-nav .logged{
-    display: none;
+    margin-top: 3px;
+    color: #ffff;
 }
